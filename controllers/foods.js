@@ -13,6 +13,7 @@ exports.getFoods = async (req, res, next) => {
     res.status(400).json({ success: false, msg: err });
   }
 }
+
 exports.getFood = async (req, res, next) => {
   try {
     const food = await Food.findById(req.params.id);
@@ -26,6 +27,7 @@ exports.getFood = async (req, res, next) => {
     res.status(400).json({ success: false, msg: err });
   }
 }
+
 exports.updateFood = async (req, res, next) => {
   try {
     const food = await Food.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
@@ -39,6 +41,7 @@ exports.updateFood = async (req, res, next) => {
     res.status(400).json({ success: false, msg: err });
   }
 }
+
 exports.createFood = async (req, res, next) => {
   try {
     const food = await Food.create(req.body);
@@ -52,6 +55,7 @@ exports.createFood = async (req, res, next) => {
     res.status(400).json({ success: false, msg: err });
   }
 }
+
 exports.deleteFood = async (req, res, next) => {
   try {
     const food = await Food.findByIdAndDelete(req.params.id);
