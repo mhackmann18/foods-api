@@ -1,6 +1,6 @@
-const Food = require('../models/Food');
+import Food from '../models/Food.js';
 
-exports.getFoods = async (req, res, next) => {
+export const getFoods = async (req, res, next) => {
   try {
     const foods = await Food.find();
 
@@ -14,7 +14,7 @@ exports.getFoods = async (req, res, next) => {
   }
 }
 
-exports.getFood = async (req, res, next) => {
+export const getFood = async (req, res, next) => {
   try {
     const food = await Food.findById(req.params.id);
 
@@ -28,7 +28,7 @@ exports.getFood = async (req, res, next) => {
   }
 }
 
-exports.updateFood = async (req, res, next) => {
+export const updateFood = async (req, res, next) => {
   try {
     const food = await Food.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
 
@@ -42,7 +42,7 @@ exports.updateFood = async (req, res, next) => {
   }
 }
 
-exports.createFood = async (req, res, next) => {
+export const createFood = async (req, res, next) => {
   try {
     const food = await Food.create(req.body);
 
@@ -56,7 +56,7 @@ exports.createFood = async (req, res, next) => {
   }
 }
 
-exports.deleteFood = async (req, res, next) => {
+export const deleteFood = async (req, res, next) => {
   try {
     const food = await Food.findByIdAndDelete(req.params.id);
 

@@ -1,5 +1,6 @@
 {
   "name": "foods-api",
+  "type": "module",
   "version": "1.0.0",
   "description": "A REST API with basic CRUD functionality that interacts with a database containing nutritional data about various foods",
   "main": "server.js",

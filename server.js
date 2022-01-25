@@ -1,19 +1,19 @@
-const express = require('express');
-const morgan = require('morgan');
-const dotenv = require('dotenv');
-const colors = require('colors');
-const connectDB = require('./config/db');
+import express from 'express';
+import morgan from 'morgan';
+import dotenv from 'dotenv';
+import connectDB from './config/db.js';
+import colors from 'colors';
 
 dotenv.config({ path: './config/config.env' });
 
 connectDB();
 
-const foods = require('./routes/foods');
+import foods from './routes/foods.js';
 
 const app = express();
 
-var cors = require('cors')
-app.use(cors())
+import cors from 'cors';
+app.use(cors());
 
 // Body Parser
 app.use(express.json());
