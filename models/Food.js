@@ -26,13 +26,129 @@ const FoodSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  carbs: {
+  carbohydrates: {
     type: Number,
     required: true
   },
-  fat: {
+  totalFat: {
     type: Number,
     required: true
+  },
+  saturatedFat: {
+    type: Number,
+    required: true
+  },
+  transFat: {
+    type: Number,
+    required: true
+  },
+  cholesterol: {
+    type: Number,
+    required: true
+  },
+  sodium: {
+    type: Number,
+    required: true
+  },
+  dietaryFiber: {
+    type: Number,
+    required: true
+  },
+  totalSugars: {
+    type: Number,
+    required: true
+  },
+  addedSugars: {
+    type: Number,
+    required: true
+  },
+  vitaminD: {
+    type: Number,
+    required: true
+  },
+  calcium: {
+    type: Number,
+    required: true
+  },
+  iron: {
+    type: Number,
+    required: true
+  },
+  potassium: {
+    type: Number,
+    required: true
+  },
+  monounsaturatedFat: {
+    type: Number
+  },
+  polyunsaturatedFat: {
+    type: Number
+  },
+  solubleFiber: {
+    type: Number
+  },
+  insolubleFiber: {
+    type: Number
+  },
+  sugarAlcohols: {
+    type: Number
+  },
+  biotin: {
+    type: Number
+  },
+  choline: {
+    type: Number
+  },
+  monounsaturatedFat: {
+    type: Number
+  },
+  caloriesFromFat: {
+    type: Number
+  },
+  phosphorous: {
+    type: Number
+  },
+  otherCarbohydrates: {
+    type: Number
+  },
+  vitaminA: {
+    type: Number
+  },
+  vitaminC: {
+    type: Number
+  },
+  vitaminE: {
+    type: Number
+  },
+  vitaminK: {
+    type: Number
+  },
+  thiamin: {
+    type: Number
+  },
+  iodine: {
+    type: Number
+  },
+  riboflavin: {
+    type: Number
+  },
+  niacin: {
+    type: Number
+  },
+  folate: {
+    type: Number
+  },
+  vitaminB12: {
+    type: Number
+  },
+  biotin: {
+    type: Number
+  },
+  pantothenicAcid: {
+    type: Number
+  },
+  magnesium: {
+    type: Number
   }
 });
 
