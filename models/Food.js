@@ -13,11 +13,15 @@ const FoodSchema = new Schema({
     trim: true,
     maxlength: [50, "Brand name cannot be longer than 50 characters"]
   },
-  servingSize: {
+  units: {
     type: String,
     trim: true,
     required: true,
-    maxlength: [20, "Serving size string cannot be longer than 20 characters"]
+    enum: ['oz', 'g', 'lbs', 'lb', 'tbsp', 'tsp', 'c', 'count' ]
+  },
+  unitsPerServing: {
+    type: Number,
+    required: true
   },
   calories: {
     type: Number,
@@ -36,48 +40,37 @@ const FoodSchema = new Schema({
     required: true
   },
   saturatedFat: {
-    type: Number,
-    required: true
+    type: Number
   },
   transFat: {
-    type: Number,
-    required: true
+    type: Number
   },
   cholesterol: {
-    type: Number,
-    required: true
+    type: Number
   },
   sodium: {
-    type: Number,
-    required: true
+    type: Number
   },
   dietaryFiber: {
-    type: Number,
-    required: true
+    type: Number
   },
   totalSugars: {
-    type: Number,
-    required: true
+    type: Number
   },
   addedSugars: {
-    type: Number,
-    required: true
+    type: Number
   },
   vitaminD: {
-    type: Number,
-    required: true
+    type: Number
   },
   calcium: {
-    type: Number,
-    required: true
+    type: Number
   },
   iron: {
-    type: Number,
-    required: true
+    type: Number
   },
   potassium: {
-    type: Number,
-    required: true
+    type: Number
   },
   monounsaturatedFat: {
     type: Number
